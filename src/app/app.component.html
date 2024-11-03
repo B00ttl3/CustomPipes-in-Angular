@@ -1,0 +1,5 @@
+<!-- Custom Pipes: In this we have to make a custom pipe from the scratch. to do that run this command on Terminal (ng g p myPipe) myPipe is the name of the pipe. we can change the name. name the pipe according to your need -->
+
+<!-- after making a new custom pipe, we will add the argument in the new pipe's ts file. which in this case is my-pipe.pipe.ts, There is a transform method there, which we will use to make our all kinds of pipes. In the example below we have used the pipe to get the power value of 5 to 3 means what is 5 ^ 3 which is 125. what we did is we needed 2 values in it, One is the which value's power we want, and 2nd is how much value we want. so we gave the first value 5 which is value in ts file and 2nd value 3 which is num1 in ts file. and as we need a return value so we used the Math.pow (which is built in angular) and then gave them (value, num1) and here in HTML file we used the string manipulation function to get ourvalues and put pipe here and got the pipe name from the name of pipe's ts file. and then gave the 2nd value after the :  -->
+
+<h1>Power of 5 :{{ 5 | myPipe : 3 }}</h1>
