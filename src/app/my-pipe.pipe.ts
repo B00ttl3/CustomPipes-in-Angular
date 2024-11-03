@@ -6,9 +6,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MyPipePipe implements PipeTransform {
 
-  transform(value: number, num1 : number) 
+    // example 1
+  // transform(value: number, num1 : number) 
+  // {
+  //   return Math.pow(value , num1);
+  // }
+
+  transform(value: string)
   {
-    return Math.pow(value , num1);
+    return `${value.slice(0,4)}-${value.slice(4,11)}` ;
   }
 
 }

@@ -2,4 +2,9 @@
 
 <!-- after making a new custom pipe, we will add the argument in the new pipe's ts file. which in this case is my-pipe.pipe.ts, There is a transform method there, which we will use to make our all kinds of pipes. In the example below we have used the pipe to get the power value of 5 to 3 means what is 5 ^ 3 which is 125. what we did is we needed 2 values in it, One is the which value's power we want, and 2nd is how much value we want. so we gave the first value 5 which is value in ts file and 2nd value 3 which is num1 in ts file. and as we need a return value so we used the Math.pow (which is built in angular) and then gave them (value, num1) and here in HTML file we used the string manipulation function to get ourvalues and put pipe here and got the pipe name from the name of pipe's ts file. and then gave the 2nd value after the :  -->
 
-<h1>Power of 5 :{{ 5 | myPipe : 3 }}</h1>
+<!-- Example 1 -->
+<!-- <h1>Power of 5 :{{ 5 | myPipe : 3 }}</h1> -->
+
+<!-- Example 2: Geting a phone number in proper formation, which is getting a - after the 4th number means 0300- doesn't matter if the person who is providin us the number puts the - in his number or not if we use this custom pipe we will get his number in the good formation. we changed the value from number to string, then we used the `` to give more then one value. and then we used the ${} and gave the values inside this. we used value.slice(0.4) 0 cause we wanted to start from the first number and 4 because we wanted to put the - after the 4th number. and then we put - and then we again used the ${} and used value.slice(4,11) cause we want the number till 11th number -->
+
+<h1>Phone number is : {{ '03001234567' | myPipe }}</h1>
