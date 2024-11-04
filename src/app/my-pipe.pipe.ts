@@ -20,11 +20,19 @@ export class MyPipePipe implements PipeTransform {
   //   return `${value.slice(0,4)}-${value.slice(4,11)}` ;
   // }
 
-  transform(value: string)
-  {
-    if (value.length<7) return `Weak Password`;
-    if(value.length<10) return `Medium Password`;
-    return `Strong Password` ;
-  }
+// Example 3
+  // transform(value: string)
+  // {
+  //   if (value.length<7) return `Weak Password`;
+  //   if(value.length<10) return `Medium Password`;
+  //   return `Strong Password` ;
+  // }
 
+  // eXAMPLE 4
+  transform(value: string) : string
+   {
+    const name = value.split(' ');
+
+    return name.map(part=>part.charAt(0).toUpperCase()).join('');
+  }
 }
