@@ -14,5 +14,11 @@ import { MyPipePipe } from './my-pipe.pipe';
 })
 export class AppComponent {
   title: string = 'This loaded dynamically';
+
+  Students = [
+    {Id: 101, Name: "Umair", Gender: "Male"},
+    {Id: 102, Name: "Amna", Gender: "Female"},
+    {Id: 103, Name: "Bilal", Gender: "Male"},
+  ]
   
 }

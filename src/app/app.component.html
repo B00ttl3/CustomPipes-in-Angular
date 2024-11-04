@@ -14,5 +14,22 @@
 
 <!-- Example 4: If I want to get the first initials of my name in upper case then this is the pipe which I will use, First we will put : string after the transform (value:string) cause we want the answer in string. then we will split the name first and then we will use the name.map function of angular to get our desired answer  -->
 
-<h1>Phone number is : {{ 'Umair Munir' | myPipe }}</h1>
+<!-- <h1>My name is : {{ 'Umair Munir' | myPipe }}</h1> -->
 
+
+<!-- Example 5: to get the Mr, and Ms, infront of the name with respect to the gender they have filled  -->
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+    </tr>
+    @for (std of Students; track std){
+        <tr>
+            <td>{{ std.Id }}</td>
+            <td>{{ std.Name | myPipe:std.Gender }}</td>
+            <td>{{ std.Gender }}</td>
+        </tr>
+    }
+</table>

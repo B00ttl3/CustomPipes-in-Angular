@@ -28,11 +28,19 @@ export class MyPipePipe implements PipeTransform {
   //   return `Strong Password` ;
   // }
 
-  // eXAMPLE 4
-  transform(value: string) : string
-   {
-    const name = value.split(' ');
+  // EXAMPLE 4
+  // transform(value: string) : string
+  //  {
+  //   const name = value.split(' ');
 
-    return name.map(part=>part.charAt(0).toUpperCase()).join('');
+  //   return name.map(part=>part.charAt(0).toUpperCase()).join('');
+  // }
+
+  // Example 5
+  transform (value: string, gender : string) : string {
+    if (gender == "Male") {
+      return `Mr. ${value}`;
+    }
+    return `Ms. ${value}`;
   }
 }
