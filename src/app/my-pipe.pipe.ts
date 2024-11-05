@@ -45,24 +45,36 @@ export class MyPipePipe implements PipeTransform {
   // }
 
   // Example 6
-  transform(value: number, targetUnit: string): string {
-    if (isNaN(value)) {
-      return ''; 
-    }
+  // transform(value: number, targetUnit: string): string {
+  //   if (isNaN(value)) {
+  //     return ''; 
+  //   }
 
-    let convertedValue: number;
+  //   let convertedValue: number;
 
-    switch (targetUnit) {
-      case 'F':
-        convertedValue = (value * 9/5) + 32;
-        return `${convertedValue.toFixed(2)} °F`;
+  //   switch (targetUnit) {
+  //     case 'F':
+  //       convertedValue = (value * 9/5) + 32;
+  //       return `${convertedValue.toFixed(2)} °F`;
 
-      case 'K':
-        convertedValue = value + 273.15;
-        return `${convertedValue.toFixed(2)} K`;
+  //     case 'K':
+  //       convertedValue = value + 273.15;
+  //       return `${convertedValue.toFixed(2)} K`;
 
-      default:
-        return `${value} °C`; 
-    }
+  //     default:
+  //       return `${value} °C`; 
+  //   }
+  // }
+
+  // Example 7:
+  transform(data : any [], sortProperty : string, order: 'asc' | 'desc' = 'asc') {
+    return data.sort((a,b)=>{
+      if(order == 'asc'){
+        return a[sortProperty] < b[sortProperty] ? -1 : 1;
+      }
+      else {
+        return a[sortProperty] > b[sortProperty] ? -1 : 1;
+      }
+    });
   }
 }

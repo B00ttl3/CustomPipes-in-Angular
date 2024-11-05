@@ -16,10 +16,10 @@ export class AppComponent {
   title: string = 'This loaded dynamically';
   celsiusValue: number = 0;
 
-  // Students = [
-  //   {Id: 101, Name: "Umair", Gender: "Male"},
-  //   {Id: 102, Name: "Amna", Gender: "Female"},
-  //   {Id: 103, Name: "Bilal", Gender: "Male"},
-  // ]
+  Students = [
+    {Id: 101, Name: "Umair", Gender: "Male", Age: 25},
+    {Id: 102, Name: "Amna", Gender: "Female", Age: 23},
+    {Id: 103, Name: "Bilal", Gender: "Male", Age: 29},
+  ]
   
 }

@@ -34,13 +34,32 @@
     }
 </table> -->
 
-<!-- Example 6:  -->
-<div>
+<!-- Example 6: Converting the temperature from celsius to fahrenheit and kelvin. Also, got two values, and used cases for F and K. -->
+<!-- <div>
     <label for="celsius">Temperature in Celsius:</label>
     <input type="number" [(ngModel)]="celsiusValue" />
   
     <p>Temperature in Fahrenheit: {{ celsiusValue | myPipe:'F' }}</p>
     <p>Temperature in Kelvin: {{ celsiusValue | myPipe:'K' }}</p>
     <p>Temperature in Celsius: {{ celsiusValue }} °C</p>
-  </div>
+  </div> -->
+
+  <!-- Example 7: getting the details of form fillers by age ascending order. We will get the data in array and will make a sort property and order in transform. and then we will use a built-in function of angular which is .sort on data and give it order in which we want the data.  -->
+
+    <table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+    </tr>
+    @for (std of Students | myPipe : 'Age'; track std){
+        <tr>
+            <td>{{ std.Id }}</td>
+            <td>{{ std.Name }}</td>
+            <td>{{ std.Gender }}</td>
+            <td>{{ std.Age }}</td>
+        </tr>
+    }
+</table>   
   
