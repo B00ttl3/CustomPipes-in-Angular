@@ -37,10 +37,32 @@ export class MyPipePipe implements PipeTransform {
   // }
 
   // Example 5
-  transform (value: string, gender : string) : string {
-    if (gender == "Male") {
-      return `Mr. ${value}`;
+  // transform (value: string, gender : string) : string {
+  //   if (gender == "Male") {
+  //     return `Mr. ${value}`;
+  //   }
+  //   return `Ms. ${value}`;
+  // }
+
+  // Example 6
+  transform(value: number, targetUnit: string): string {
+    if (isNaN(value)) {
+      return ''; 
     }
-    return `Ms. ${value}`;
+
+    let convertedValue: number;
+
+    switch (targetUnit) {
+      case 'F':
+        convertedValue = (value * 9/5) + 32;
+        return `${convertedValue.toFixed(2)} °F`;
+
+      case 'K':
+        convertedValue = value + 273.15;
+        return `${convertedValue.toFixed(2)} K`;
+
+      default:
+        return `${value} °C`; 
+    }
   }
 }

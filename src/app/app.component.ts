@@ -14,11 +14,12 @@ import { MyPipePipe } from './my-pipe.pipe';
 })
 export class AppComponent {
   title: string = 'This loaded dynamically';
+  celsiusValue: number = 0;
 
-  Students = [
-    {Id: 101, Name: "Umair", Gender: "Male"},
-    {Id: 102, Name: "Amna", Gender: "Female"},
-    {Id: 103, Name: "Bilal", Gender: "Male"},
-  ]
+  // Students = [
+  //   {Id: 101, Name: "Umair", Gender: "Male"},
+  //   {Id: 102, Name: "Amna", Gender: "Female"},
+  //   {Id: 103, Name: "Bilal", Gender: "Male"},
+  // ]
   
 }

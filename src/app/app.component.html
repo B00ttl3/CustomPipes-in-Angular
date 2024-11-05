@@ -19,7 +19,7 @@
 
 <!-- Example 5: to get the Mr, and Ms, infront of the name with respect to the gender they have filled  -->
 
-<table border="1">
+<!-- <table border="1">
     <tr>
         <th>Id</th>
         <th>Name</th>
@@ -32,4 +32,15 @@
             <td>{{ std.Gender }}</td>
         </tr>
     }
-</table>
+</table> -->
+
+<!-- Example 6:  -->
+<div>
+    <label for="celsius">Temperature in Celsius:</label>
+    <input type="number" [(ngModel)]="celsiusValue" />
+  
+    <p>Temperature in Fahrenheit: {{ celsiusValue | myPipe:'F' }}</p>
+    <p>Temperature in Kelvin: {{ celsiusValue | myPipe:'K' }}</p>
+    <p>Temperature in Celsius: {{ celsiusValue }} °C</p>
+  </div>
+  
